@@ -1,3 +1,4 @@
 /node_modules/
-storage/*.csv
+/storage/*.sqlite
+/storage/*.csv
 .DS_Store

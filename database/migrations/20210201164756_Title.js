@@ -1,11 +1,12 @@
-const Knex = require('knex');
+const { Knex } = require('knex');
 
 /**
- * 
- * @param {Knex} knex 
+ *
+ * @param {Knex} knex
  */
-exports.up = function(knex) {
+exports.up = function (knex) {
   return knex.schema.createTable('titles', (table) => {
+    table.comment('The titles table - contains data relevant to ONLY the title. Subjects, authors, etc have their own tables');
     table.increments().primary();
     table.string('title');
     // table.string('authors');
@@ -23,6 +24,6 @@ exports.up = function(knex) {
   });
 };
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTable('titles');
 };
