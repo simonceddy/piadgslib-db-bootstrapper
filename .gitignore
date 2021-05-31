@@ -1,4 +1,5 @@
 /node_modules/
 /storage/*.sqlite
 /storage/*.csv
+/storage/json/*
 .DS_Store
